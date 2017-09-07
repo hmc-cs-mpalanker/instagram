@@ -1,0 +1,11 @@
+<h1>Recent Posts</h1>
+
+<% @post.each do |x| %>
+  <div style="border-radius: 25px;
+    border: 6px solid grey;
+    padding: 20px;">
+    <h3><%= x.description %></h3>
+    <%= image_tag(x.image.url(:medium)) %>
+  </div>
+  <br>
+<% end %>
