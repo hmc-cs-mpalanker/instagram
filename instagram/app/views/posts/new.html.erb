@@ -1,5 +1,6 @@
 
 <%- if current_user %>
+	<h1>Welcome! <%= current_user.email %></h1>
 	<h2>New Post!</h2>
 	<hr>
 	<%= form_for @post, html: { multipart: true } do |f| %>
@@ -9,6 +10,8 @@
 			<br>
 			<%= f.label :description %>
 			<%= f.text_area :description %>
+			<br>
+      <%= f.hidden_field :user, value: current_user.email%>
 			<br>
 			<%= f.submit %>
 		</div>

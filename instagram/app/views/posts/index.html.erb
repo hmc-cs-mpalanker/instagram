@@ -6,6 +6,8 @@
     padding: 20px;">
     <h3><%= x.description %></h3>
     <%= image_tag(x.image.url(:medium)) %>
+    <br>
+    <%= x.user %>
   </div>
   <br>
 <% end %>
