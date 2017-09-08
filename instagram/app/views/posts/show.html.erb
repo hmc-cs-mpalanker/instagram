@@ -1,4 +1,4 @@
 <h3><%= @post.description %></h3>
 <%= image_tag(@post.image.url(:medium)) %>
 <br>
-<%= @post.user %>
+<%= link_to User.find(@post.user).email, '/user/' + @post.user%>

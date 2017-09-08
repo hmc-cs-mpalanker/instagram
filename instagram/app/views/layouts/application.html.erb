@@ -29,6 +29,9 @@
                         </li>
 			<%- if current_user %>
 			<li>
+				<%= link_to "See My Posts",  '/user/' + current_user.id.to_s%>
+			</li>
+			<li>
 				<%= link_to "Log out", destroy_user_session_path, method: :delete, confirm: "Are you sure?" %>
 			</li>
 			<% else %>

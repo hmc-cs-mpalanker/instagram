@@ -11,6 +11,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def list
+    @post = Post.where(user: params[:user]).reverse
+  end
+
   def create
     @post = Post.new(permit_post)
     if @post.save
